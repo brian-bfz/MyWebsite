@@ -1,0 +1,59 @@
+@use "sass:color";
+@import "src/assets/scss/mixins";
+@import "src/assets/scss/variables";
+
+.aboutTemplate {
+  --color: var(--color-about-template);
+
+  .button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    outline: 0;
+
+    &:hover {
+      --color: var(--color-about-template-hover);
+    }
+
+    &.active {
+      --color: var(--color-about-template-active);
+    }
+  }
+
+  .tabButton {
+    margin: 0 10px !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: var(--color) !important;
+    background-color: var(--background-color) !important;
+    transition: background-color 400ms, color 400ms !important;
+
+    &:hover {
+      background-color: var(--background-color-hover) !important;
+    }
+
+    &.active {
+      background-color: var(--background-color-active) !important;
+    }
+  }
+
+  .downloadButton {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color);
+    background-color: var(--background-color);
+    transition: background-color 400ms, color 400ms;
+
+    &:hover {
+      background-color: var(--background-color-hover);
+    }
+  }
+}

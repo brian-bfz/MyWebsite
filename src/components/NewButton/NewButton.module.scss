@@ -1,0 +1,25 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.button {
+  border: 1px solid var(--color-button-border);
+  border-radius: $button-border-radius;
+  color: var(--color-button-color);
+  display: inline-block;
+  font-size: $typographic-base-font-size;
+  font-weight: normal;
+  height: $button-height;
+  line-height: $button-height;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--button-background-color);
+  @include padding(0, 1);
+
+  &:hover,
+  &:focus {
+    color: $color-blue;
+  }
+}
