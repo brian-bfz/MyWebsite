@@ -48,5 +48,3 @@ I long for the two camps I went to, although I know I am romanticizing them. Som
 Can you miss a home you have never been to?
 
 Maybe one of the essence of the camps was their transcience. It made us cherish our time more. It insulated me from things I didn't want to worry about. It's not that I didn't worry about things. I often felt challenged to understand a class or to prove my worthiness. I often pondered over X-risks and human flourishing. But worrying about these things felt good, unlike worrying about the margin size of my resume. 
-
-C asked me to organize a Sparkler meetup. The idea didn't appeal to me. I don't know why. But again, it's rare for me to feel excited about things recently. 
