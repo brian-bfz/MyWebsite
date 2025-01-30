@@ -33,3 +33,13 @@ I hope you liked the ones above the water fountain!<br>
 ![Brian at the corner of a party](./memes/meme4.jpg)<br>
 <br>
 ![Brian procrastinates his UW essay](./memes/meme5.jpg)<br>
+<br>
+![Brian dodging arrows](./memes/meme6.png)<br>
+<br>
+![Marriage Pact? No! LinkedIn!](./memes/meme7.png)<br>
+<br>
+![Be a legend. Leave the laundry machine door open.](./memes/meme8.png)<br>
+<br>
+![Waiting for the John Jay water fountain to be fixed](./memes/meme9.png)<br>
+<br>
+![John Jay cold shower experience](./memes/meme10.png)<br>
