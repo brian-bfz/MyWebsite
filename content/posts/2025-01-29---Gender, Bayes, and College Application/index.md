@@ -3,7 +3,7 @@ title: Gender, Bayes, and College Application
 date: "2025-01-29T23:46:37.121Z"
 template: "post"
 draft: false
-slug: "/posts/home"
+slug: "/posts/gender-bayes"
 category: "Blog"
 tags:
   - "Gender"
