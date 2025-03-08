@@ -44,7 +44,7 @@ I hope you liked the ones above the water fountain!<br>
 <br>
 ![John Jay cold shower experience](./memes/meme10.png)<br>
 <br>
-![Dante putting his enemies in hell](./memes/meme11.png)<br>
+![Dante putting his enemies in hell](./memes/meme11.jpg)<br>
 <br>
 ![Engineering students pulling up to free hoodies at Lerner](./memes/meme12.png)<br>
 <br>
