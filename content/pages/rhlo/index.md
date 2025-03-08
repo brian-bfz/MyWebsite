@@ -8,7 +8,7 @@ Uh, so, remember that time a bozo put this up all around John Jay
 
 ![A portrait of Brian with instances of his life sprinkled around](./poster.jpg)
 
-That bozo somehow got elected, so now he has to take his promises seriously 🤡<br>
+That bozo somehow got elected, so now he has to take his promises seriously <br>
 Anyways, here is an update:
 
 ## Zipline
@@ -43,3 +43,9 @@ I hope you liked the ones above the water fountain!<br>
 ![Waiting for the John Jay water fountain to be fixed](./memes/meme9.png)<br>
 <br>
 ![John Jay cold shower experience](./memes/meme10.png)<br>
+<br>
+![Dante putting his enemies in hell](./memes/meme11.png)<br>
+<br>
+![Engineering students pulling up to free hoodies at Lerner](./memes/meme12.png)<br>
+<br>
+![So called freethinkers when the fire alarm rings at 2am](./memes/meme13.png)<br>
