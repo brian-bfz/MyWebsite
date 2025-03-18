@@ -1,4 +1,4 @@
-Codebase for my personal website, [bfzhao.com.](www.bfzhao.com)
+Codebase for my personal website, [bfzhao.com.](https://www.bfzhao.com/)
 
 Based on Lumen, a Gatsby starter.
 
