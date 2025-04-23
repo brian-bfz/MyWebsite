@@ -46,6 +46,25 @@
                     <div class="pesticide-layer"></div>
                 </div>
             </div>
+
+            <!-- Molecular view frame -->
+            <div class="magnifying-glass" id="magnifying-glass">
+                <div class="molecular-view">
+                    <!-- Corn starch animation container -->
+                    <div id="corn-starch-animation" class="chemical-animation" style="display: none;">
+                        <h5>Corn Starch Mechanism</h5>
+                        <div class="animation-container" id="corn-starch-container"></div>
+                    </div>
+
+                    <!-- Baking soda animation container -->
+                    <div id="baking-soda-animation" class="chemical-animation" style="display: none;">
+                        <h5>Baking Soda Mechanism</h5>
+                        <div class="animation-container" id="baking-soda-container"></div>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
 
         <div class="results-area" id="results">
@@ -77,6 +96,11 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Load animation scripts first -->
+    <script src="js/fruit-washing.js"></script>
+    <script src="js/corn-starch.js"></script>
+    <script src="js/baking-soda.js"></script>
+    <!-- Load main script last -->
+    <script src="js/main.js"></script>
 </body>
 </html>
