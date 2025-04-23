@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Pesticide Removal Interactive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="intro">
+        <h1>The Science of Clean Fruit</h1>
+        <p>Have you seen those viral videos claiming baking soda removes pesticides from fruits? But is it actually true? Test different cleaning methods below to see how effectively they remove pesticides from fruits, based on real scientific research.</p>
+    </div>
+
+    <div class="experiment-container">
+        <div class="selection-area">
+            <div class="selector">
+                <h3>Step 1: Choose a Fruit</h3>
+                <div class="options" id="fruit-options">
+                    <div class="option selected" data-fruit="apple">Apple</div>
+                    <div class="option" data-fruit="strawberry">Strawberry</div>
+                    <div class="option" data-fruit="grape">Grape</div>
+                    <div class="option" data-fruit="lemon">Lemon</div>
+                </div>
+            </div>
+
+            <div class="selector">
+                <h3>Step 2: Select Washing Method</h3>
+                <div class="options" id="method-options">
+                    <div class="option selected" data-method="water">Water Only</div>
+                    <div class="option" data-method="baking-soda">5% Baking Soda</div>
+                    <div class="option" data-method="corn-starch">2% Corn Starch</div>
+                    <div class="option" data-method="sequential">Sequential (Corn Starch + Baking Soda)</div>
+                </div>
+            </div>
+        </div>
+
+        <button id="start-experiment">Start Experiment</button>
+
+        <div class="visualization-area">
+            <div class="water-container"></div>
+            <div class="bubbles" id="bubbles-container"></div>
+            <div class="fruit-container">
+                <div class="fruit-image">
+                    <img id="fruit-img" src="images/apple.svg" alt="Fruit" width="160" height="160" />
+                    <div class="pesticide-layer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-area" id="results">
+            <h3>Experiment Results</h3>
+            <p id="result-text">Water alone removed 20% of pesticides from the apple.</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="result-bar"></div>
+            </div>
+            <p class="percentage" id="percentage-text">20% Pesticide Removed</p>
+            <div class="interpretation" id="interpretation">
+                Water washing provides some basic cleaning but leaves most pesticide residues behind.
+            </div>
+        </div>
+    </div>
+
+    <div class="conclusion">
+        <h3>What the Science Says</h3>
+        <p>According to research published in the journal Foods, different washing methods show varying effectiveness in removing pesticides like <span class="term" data-term="thiabendazole">thiabendazole</span> from fruit surfaces. The study used <span class="term" data-term="sers">Surface-Enhanced Raman Spectroscopy (SERS)</span> and <span class="term" data-term="lcms">liquid chromatography-mass spectrometry (LC-MS/MS)</span> to measure pesticide removal.</p>
+        <p>Their findings showed that a sequential cleaning method using both corn starch and baking soda was most effective. This interactive demonstration simplifies the study's findings to help visualize how different washing techniques perform.</p>
+        <p><strong>Source:</strong> <a href="https://www.mdpi.com/2304-8158/14/2/318" target="_blank">Efficiency of Household and Commercial Washing Practices for Pesticide Removal from Fresh Produce (MDPI Foods, 2023)</a></p>
+    </div>
+
+    <!-- Term explanation popup -->
+    <div id="term-popup" class="term-popup">
+        <div class="term-popup-content">
+            <span class="close-popup">&times;</span>
+            <h4 id="term-title">Term</h4>
+            <p id="term-explanation">Explanation goes here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

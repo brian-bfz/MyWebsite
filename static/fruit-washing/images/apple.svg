@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Apple body -->
+    <circle cx="80" cy="85" r="60" fill="#e41e25"/>
+    <!-- Apple stem -->
+    <path d="M80,25 C80,25 75,35 80,45 C85,35 80,25 80,25" fill="#5e3b28"/>
+    <!-- Apple leaf -->
+    <path d="M80,45 C80,45 95,35 110,40 C95,50 80,45 80,45" fill="#3a9d23"/>
+    <!-- Apple highlight -->
+    <ellipse cx="60" cy="65" rx="15" ry="20" fill="#f4777c" opacity="0.5"/>
+  </g>
+</svg>
