@@ -154,18 +154,6 @@ function startCornStarchAnimation(container = document.getElementById('corn-star
             bond1.style.opacity = '1';
             bond2.style.opacity = '1';
 
-            // Add a text explanation
-            const explanation = document.createElement('div');
-            explanation.textContent = 'Hydrogen bonds form between nitrogen atoms (blue) on thiabendazole and hydroxyl groups (green) on starch';
-            explanation.style.position = 'absolute';
-            explanation.style.bottom = '5px';
-            explanation.style.left = '5px';
-            explanation.style.right = '5px';
-            explanation.style.fontSize = '9px';
-            explanation.style.textAlign = 'center';
-            explanation.style.color = '#333';
-            container.appendChild(explanation);
-
             setTimeout(() => {
                 // Wash away both molecules together
                 starch.style.top = '150%'; // Move completely off screen

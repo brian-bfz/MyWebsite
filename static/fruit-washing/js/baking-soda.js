@@ -90,23 +90,10 @@ function startBakingSodaAnimation(container = document.getElementById('baking-so
         hydroxides.push(hydroxide);
     }
 
-    // Add explanation text
-    const explanation = document.createElement('div');
-    explanation.textContent = 'Hydroxide ions from baking soda solution';
-    explanation.style.position = 'absolute';
-    explanation.style.top = '25%';
-    explanation.style.left = '5px';
-    explanation.style.right = '5px';
-    explanation.style.fontSize = '9px';
-    explanation.style.textAlign = 'center';
-    explanation.style.color = '#333';
-    container.appendChild(explanation);
+
 
     // Animation sequence
     setTimeout(() => {
-        // Update explanation
-        explanation.textContent = 'Hydroxide ions break down the waxy layer through alkaline hydrolysis';
-
         // Move hydroxide ions to the wax layer (but not past it)
         for (let i = 0; i < hydroxides.length; i++) {
             const hydroxide = hydroxides[i];
@@ -119,18 +106,11 @@ function startBakingSodaAnimation(container = document.getElementById('baking-so
 
         // Start dissolving the wax layer
         setTimeout(() => {
-            // Update explanation
-            explanation.textContent = 'As the waxy layer breaks down, pesticides can be washed away';
-
             // Make wax layer disappear
             waxLayer.style.opacity = '0';
 
             // Move hydroxide ions upward and away
             setTimeout(() => {
-                // Update explanation
-                explanation.style.bottom = '5px';
-                explanation.style.top = 'auto';
-                explanation.textContent = 'Baking soda doesn\'t break down pesticides directly, but removes the waxy layer that traps them';
 
                 // Move hydroxide ions away first
                 for (let i = 0; i < hydroxides.length; i++) {

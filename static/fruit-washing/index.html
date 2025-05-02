@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Pesticide Removal Interactive</title>
+    <title>Soaking Strawberries in Baking Soda</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="intro">
-        <h1>The Science of Clean Fruit</h1>
-        <p>Have you seen those viral videos claiming baking soda removes pesticides from fruits? But is it actually true? Test different cleaning methods below to see how effectively they remove pesticides from fruits, based on real scientific research.</p>
+        <h1>Does Soaking Strawberries in Baking Soda Really Remove Pesticides? A TikTok Claim Put to the Test</h1>
+        <div class="note">
+            <p><strong>Note:</strong> You can click on <span class="term" data-term="example">highlighted terms</span> to view their definitions.</p>
+        </div>
+        <p>Scrolling through TikTok, you've probably seen influencers claiming that certain kitchen hacks will promise a healthier or cleaner lifestyle, especially amidst popular health trends like going gluten-free or avoiding ultra-processed foods. One video from <a href="https://www.tiktok.com/@detroit75kitchen/video/7211570715886177578">@detroit75kitchen</a> claims that soaking strawberries in a baking soda solution will remove dirt and pesticides. But is this claim accurate? Welcome back to another blog article on Fruit Scientists, where we investigate social media claims on health, wellness, and nutrition by using hardcore science!</p>
+        <p>To see if this viral claim holds any scientific weight, we present to you a 2023 study published in <span class="term italic" data-term="Foods">Foods</span>. The study, <a href = "https://www.mdpi.com/2304-8158/14/2/318">"Evaluation of Household and Commercial Washing Agents for Removal of Pesticide Residue from Fruit Surfaces,"</a> compared the efficiency of various household ingredients in removing the pesticide <span class="term" data-term="thiabendazole">thiabendazole</span>. The researchers soaked several organic fruits from Whole Foods---apples, grapes, lemons, and strawberries---in thiabendazole for an hour. They then selected a cleaning agent among corn starch, rice flour, all-purpose flour, baking soda, and commercial cleaning agents, and soaked the fruits in that agent. Finally, they flush the fruits in <span class="term" data-term="deionized water">deionized water</span> for 30 seconds. The process was repeated for all the cleaning agents and fruits listed.</p>
+        <p>So, how good is each cleaning agent? Let's try it ourselves!</p>
     </div>
 
     <div class="experiment-container">
@@ -27,10 +32,10 @@
             <div class="selector">
                 <h3>Step 2: Select Washing Method</h3>
                 <div class="options" id="method-options">
-                    <div class="option selected" data-method="water">Water Only</div>
-                    <div class="option" data-method="baking-soda">5% Baking Soda</div>
-                    <div class="option" data-method="corn-starch">2% Corn Starch</div>
-                    <div class="option" data-method="sequential">Sequential (Corn Starch + Baking Soda)</div>
+                    <div class="option apple-only" data-method="corn-starch">2% Corn Starch</div>
+                    <div class="option apple-only" data-method="baking-soda">5% Baking Soda</div>
+                    <div class="option selected" data-method="sequential">Sequential (Corn Starch + Baking Soda)</div>
+                    <div class="option" data-method="commercial">Commercial Cleaner</div>
                 </div>
             </div>
         </div>
@@ -61,15 +66,12 @@
                         <h5>Baking Soda Mechanism</h5>
                         <div class="animation-container" id="baking-soda-container"></div>
                     </div>
-
-
                 </div>
             </div>
         </div>
 
         <div class="results-area" id="results">
             <h3>Experiment Results</h3>
-            <p id="result-text">Water alone removed 20% of pesticides from the apple.</p>
             <div class="progress-container">
                 <div class="progress-bar" id="result-bar"></div>
             </div>
@@ -81,10 +83,16 @@
     </div>
 
     <div class="conclusion">
-        <h3>What the Science Says</h3>
-        <p>According to research published in the journal Foods, different washing methods show varying effectiveness in removing pesticides like <span class="term" data-term="thiabendazole">thiabendazole</span> from fruit surfaces. The study used <span class="term" data-term="sers">Surface-Enhanced Raman Spectroscopy (SERS)</span> and <span class="term" data-term="lcms">liquid chromatography-mass spectrometry (LC-MS/MS)</span> to measure pesticide removal.</p>
-        <p>Their findings showed that a sequential cleaning method using both corn starch and baking soda was most effective. This interactive demonstration simplifies the study's findings to help visualize how different washing techniques perform.</p>
-        <p><strong>Source:</strong> <a href="https://www.mdpi.com/2304-8158/14/2/318" target="_blank">Efficiency of Household and Commercial Washing Practices for Pesticide Removal from Fresh Produce (MDPI Foods, 2023)</a></p>
+        <h3>How do we know?</h3>
+        <p>The researchers used <span class="term" data-term="mass spectrometry">mass spectrometry</span> to measure the concentration of pesticide in the washed fruits' interior. For apple peels, they also used <span class="term" data-term="sers">surface-enhanced raman spectroscopy</span>, which is a faster way of measuring pesticide residue on the surface. The two methods present converging evidence on the effectiveness of baking soda and cornstarch. </p>
+        <h3>What does this mean?</h3>
+        <p>As you can see, baking soda indeed does work, but not as well on its own. The most effective strategy was a two-step soak—soak the fruit in a 2% corn starch solution, followed by a 5% baking soda solution. In other words, while baking soda isn't a miracle cleaner by itself like the TikTok video claimed, when paired with corn starch, it removes ~90% of pesticide residue. The study confirmed this across multiple fruits, like grapes, lemons, and strawberries.</p>
+        <div class="note">
+            <p><strong>Try it yourself:</strong> You can make these solutions at home by mixing half a teaspoon of cornstarch, a full teaspoon of baking soda, and 100ml of water.</p>
+        </div>
+        <p>Of course, no study is perfect; there are biases worth noting. The study only focused on one type of pesticide—thiabendazole. There are many pesticides with different chemical properties, so what method works on one may not work on others. And the controlled lab conditions (no scrubbing, exact soaking times, specific concentrations) don't exactly mimic an average fruit wash at home. Finally, there's the ever-present issue of publication bias—studies that show successful or “positive” outcomes are more likely to be published than ones that don't. So while this study does mostly validate the social media claim, there are still limitations to how this study can be applied. However, the study itself stands quite strong in the challenge of independence: the authors declare no conflict of interest, and the study is funded by the <span class="term" data-term="USDA">USDA</span>. Overall, the result is trustworthy.</p>
+        <p>So… should you soak your strawberries in baking soda? The short answer: yes, but with nuance. The TikTok claim is partially supported. Soaking strawberries in baking soda does help reduce pesticide residue, but it works best when combined with a corn starch solution and then soaked, not just rinsed or scrubbed. This research doesn't just clarify a viral video. It also connects it to a broader concern many people have: food safety in an industrialized agricultural world. As more consumers seek out cleaner eating habits and DIY hacks, it's important to separate quick visual satisfaction from scientific evidence.</p>
+        <p>So next time you're prepping a fruit salad, go ahead and give those berries a soak---just don't forget the corn starch.</p>
     </div>
 
     <!-- Term explanation popup -->

@@ -1,43 +1,39 @@
 // Data based on the study results (simplified for demonstration)
 const removalRates = {
     'apple': {
-        'water': 20,
-        'baking-soda': 65,
-        'corn-starch': 75,
-        'sequential': 90
+        'corn-starch': 70,
+        'baking-soda': 74,
+        'sequential': 84,
+        'commercial': 86
     },
     'strawberry': {
-        'water': 25,
-        'baking-soda': 60,
-        'corn-starch': 70,
-        'sequential': 85
+        'sequential': 89,
+        'commercial': 88
     },
     'grape': {
-        'water': 15,
-        'baking-soda': 55,
-        'corn-starch': 65,
-        'sequential': 80
+        'sequential': 99,
+        'commercial': 98
     },
     'lemon': {
-        'water': 30,
-        'baking-soda': 70,
-        'corn-starch': 75,
-        'sequential': 88
+        'sequential': 96,
+        'commercial': 98
     }
 };
 
 const interpretations = {
-    'water': "Water washing provides some basic cleaning but leaves most pesticide residues behind.",
-    'baking-soda': "Baking soda solution is more effective than water alone, breaking down some pesticide compounds through alkaline hydrolysis of the wax layer.",
-    'corn-starch': "Corn starch solution works surprisingly well, adsorbing pesticides through physisorption and chemisorption, removing them from the fruit surface.",
-    'sequential': "The sequential method (corn starch followed by baking soda) shows the highest effectiveness, combining adsorption and chemical breakdown mechanisms."
+    'corn-starch': "Starch molecules bind to thiabendazole molecules, forming a complex that's easier to wash away.",
+    'baking-soda': "Baking soda produces hydroxide ions that break down the waxy layer on fruit, allowing the pesticides beneath to be washed away more easily."
 };
 
 // Glossary of technical terms and their explanations
 const glossary = {
-    'thiabendazole': "Thiabendazole is a fungicide and parasiticide commonly used on fruits to prevent mold, blight, and other fungal diseases. It's often applied post-harvest to extend shelf life of produce.",
-    'sers': "Surface-Enhanced Raman Spectroscopy (SERS) is an analytical technique that enhances Raman scattering by molecules adsorbed on rough metal surfaces. It allows scientists to detect and identify very small amounts of chemicals, making it useful for measuring pesticide residues on fruit surfaces.",
-    'lcms': "Liquid Chromatography-Mass Spectrometry (LC-MS/MS) is a powerful analytical technique that combines the physical separation capabilities of liquid chromatography with the mass analysis capabilities of mass spectrometry. It's highly sensitive and can detect trace amounts of pesticides in samples."
+    'example': "We use this to explain technical jargons and provide additional context.", 
+    'Foods': "Foods is a peer-reviewed journal published by Multidisciplinary Digital Publishing Institute (MDPI). It ranks 38 out of 173 titles in the Food Science and Technology category, indicating that it is a reliable journal.",
+    'thiabendazole': "Thiabendazole is a chemical commonly used on fruits to prevent mold, blight, and other fungal diseases. It makes fruits last longer on the shelf.",
+    'deionized water': "Deionized water is another way of saying pure water. Using pure water that doesn't contain ions or contaminants makes the experiment more reliable by controlling for variables.",
+    'sers': "Surface-Enhanced Raman Spectroscopy (SERS) shines a beam of laser on the apple and measures the light reflected. It can tell thiabendazole from other chemicals based on its color. The more light of that color is reflected, the more thiabendazole is present.",
+    'mass spectrometry': "The researchers first separate the chemicals using liquid chromatography, which forces the chemicals to flow through a column at different speeds. Then, they bombard the chemicals with ions and measure the mass and charge of the resulting fragments. This identifies the type of chemicals present and the amount of each chemical.",
+    'USDA': "The United States Department of Agriculture is a federal agency responsible for overseeing and implementing policies related to American farming, forestry, food safety, and nutrition."
 };
 
 // Fruit images using SVG files
@@ -53,7 +49,6 @@ const fruitOptions = document.getElementById('fruit-options');
 const methodOptions = document.getElementById('method-options');
 const startButton = document.getElementById('start-experiment');
 const resultArea = document.getElementById('results');
-const resultText = document.getElementById('result-text');
 const resultBar = document.getElementById('result-bar');
 const percentageText = document.getElementById('percentage-text');
 const interpretation = document.getElementById('interpretation');
@@ -83,6 +78,27 @@ fruitOptions.querySelectorAll('.option').forEach(option => {
         // Update fruit image
         const fruit = option.getAttribute('data-fruit');
         fruitImg.src = fruitImages[fruit];
+
+        // Show/hide apple-specific methods
+        if (fruit === 'apple') {
+            document.querySelector('.selection-area').classList.add('apple-selected');
+            // Make sure a valid method is selected
+            if (!methodOptions.querySelector('.selected') ||
+                !removalRates[fruit][methodOptions.querySelector('.selected').getAttribute('data-method')]) {
+                // Select sequential by default
+                methodOptions.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+                methodOptions.querySelector('[data-method="sequential"]').classList.add('selected');
+            }
+        } else {
+            document.querySelector('.selection-area').classList.remove('apple-selected');
+            // For non-apple fruits, only sequential and commercial are valid
+            const currentMethod = methodOptions.querySelector('.selected')?.getAttribute('data-method');
+            if (currentMethod !== 'sequential' && currentMethod !== 'commercial') {
+                // Select sequential by default
+                methodOptions.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+                methodOptions.querySelector('[data-method="sequential"]').classList.add('selected');
+            }
+        }
     });
 });
 
@@ -98,6 +114,12 @@ methodOptions.querySelectorAll('.option').forEach(option => {
 startButton.addEventListener('click', () => {
     const selectedFruit = fruitOptions.querySelector('.selected').getAttribute('data-fruit');
     const selectedMethod = methodOptions.querySelector('.selected').getAttribute('data-method');
+
+    // Check if the selected method is valid for the selected fruit
+    if (!removalRates[selectedFruit][selectedMethod]) {
+        alert('This washing method is not available for the selected fruit. Please choose another method.');
+        return;
+    }
 
     // Show washing animation
     waterContainer.style.height = '80%';
@@ -115,9 +137,6 @@ startButton.addEventListener('click', () => {
 
         // Update pesticide layer opacity based on removal rate
         pesticideLayer.style.opacity = 1 - (removalRate / 100);
-
-        // Update results text
-        resultText.textContent = `${selectedMethod.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())} removed ${removalRate}% of pesticides from the ${selectedFruit}.`;
 
         // Update progress bar
         resultBar.style.width = `${removalRate}%`;
@@ -140,11 +159,11 @@ startButton.addEventListener('click', () => {
             setTimeout(() => {
                 magnifyingGlass.style.display = 'none';
                 hideAllAnimations();
-            }, 500); // Faster hiding (was 1000)
+            }, 500);
 
-        }, 1500); // Faster reset (was 2000)
+        }, 1500);
 
-    }, animationDuration); // Dynamic duration based on method
+    }, animationDuration);
 });
 
 // Function to show the appropriate molecular animation
@@ -169,8 +188,8 @@ function showMolecularAnimation(method) {
             // For sequential, we don't show the magnifying glass
             magnifyingGlass.style.display = 'none';
             break;
-        case 'water':
-            // No special animation for water, just hide the magnifying glass
+        case 'commercial':
+            // No special animation for commercial cleaner, just hide the magnifying glass
             magnifyingGlass.style.display = 'none';
             break;
     }
@@ -217,4 +236,7 @@ termPopup.addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     // Set default fruit (apple)
     fruitImg.src = fruitImages['apple'];
+
+    // Make sure apple-specific methods are visible initially
+    document.querySelector('.selection-area').classList.add('apple-selected');
 });

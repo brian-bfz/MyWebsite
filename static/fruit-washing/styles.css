@@ -5,6 +5,14 @@ body {
     padding: 20px;
     color: #333;
     background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Add paragraph styling with indentation */
+p {
+    margin-bottom: 1.2em;
+    text-indent: 1.5em;
+    line-height: 1.8;
 }
 
 h1 {
@@ -17,6 +25,10 @@ h1 {
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+
+.italic {
+    font-style: italic;
 }
 
 .experiment-container {
@@ -292,6 +304,22 @@ button:hover {
 }
 
 /* Term explanation styles */
+.note {
+    background-color: #e3f2fd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border-left: 4px solid #1976d2;
+}
+
+.term-example {
+    color: #1976d2;
+    text-decoration: underline;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
 .term {
     color: #1976d2;
     text-decoration: underline;
@@ -347,4 +375,12 @@ button:hover {
 
 #term-explanation {
     line-height: 1.5;
+}
+
+.apple-only {
+    display: none; /* Hidden by default */
+}
+
+.apple-selected .apple-only {
+    display: block; /* Show when apple is selected */
 }
