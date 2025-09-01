@@ -18,6 +18,7 @@ const templates = Object.freeze({
   pageTemplate: path.resolve("./src/templates/PageTemplate/PageTemplate.tsx"),
   postTemplate: path.resolve("./src/templates/PostTemplate/PostTemplate.tsx"),
   aboutTemplate: path.resolve("./src/templates/AboutTemplate/AboutTemplate.tsx"),
+  secretTemplate: path.resolve("./src/templates/SecretTemplate/SecretTemplate.tsx"),
 });
 
 export default templates;

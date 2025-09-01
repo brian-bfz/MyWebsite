@@ -37,6 +37,14 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
     context: {},
   });
 
+  // Client-only route for secret pages
+  createPage({
+    path: constants.routes.secretRoute,
+    matchPath: "/secret/*",
+    component: constants.templates.secretTemplate,
+    context: {},
+  });
+
   const pages = await queries.pagesQuery(graphql);
 
   pages.forEach((edge) => {
