@@ -44,10 +44,16 @@ exports.handler = async (event) => {
     "HttpOnly",
     "SameSite=Lax",
     "Max-Age=86400", // 24 hours
-    isSecure ? "Secure" : "",
+    // Only use Secure flag in production (Netlify), not localhost
+    (isSecure && !process.env.NETLIFY_DEV) ? "Secure" : "",
   ]
     .filter(Boolean)
     .join("; ");
+
+  // Debug logging (remove in production)
+  console.log("Setting cookie for key:", matchedKey);
+  console.log("Cookie string:", cookie);
+  console.log("Is secure:", isSecure);
 
   return {
     statusCode: 200,
