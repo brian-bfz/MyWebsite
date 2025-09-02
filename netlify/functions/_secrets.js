@@ -28,14 +28,12 @@ const SECRETS = {
   puzzle2: {
     password: "6439", 
     title: "Center", 
-    html: "Oops. Brian hasn't made this puzzle yet."
+    html: readHtmlFile('puzzle2.html')
   },
   puzzle3_location: {
     password: "todo", 
     title: "FINAL MISSION", 
-    html: `
-      <h2>Find Yuri, Reckoner of Relativity, and fight him.</h2>
-    `,
+    html: readHtmlFile('puzzle3_location.html')
   }
 };
 
