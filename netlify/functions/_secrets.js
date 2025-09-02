@@ -31,7 +31,7 @@ const SECRETS = {
     html: readHtmlFile('puzzle2.html')
   },
   puzzle3_location: {
-    password: "todo", 
+    password: "INFO", 
     title: "FINAL MISSION", 
     html: readHtmlFile('puzzle3_location.html')
   }
