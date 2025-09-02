@@ -24,13 +24,13 @@
   }
 
   .tabButton {
-    margin: 0 10px !important;
-    padding: 10px 20px !important;
+    background-color: var(--background-color) !important;
     border-radius: 5px !important;
+    color: var(--color) !important;
     font-size: 16px !important;
     font-weight: bold !important;
-    color: var(--color) !important;
-    background-color: var(--background-color) !important;
+    margin: 0 10px !important;
+    padding: 10px 20px !important;
     transition: background-color 400ms, color 400ms !important;
 
     &:hover {
@@ -43,13 +43,13 @@
   }
 
   .downloadButton {
-    margin: 10px;
-    padding: 10px 20px;
+    background-color: var(--background-color);
     border-radius: 5px;
+    color: var(--color);
     font-size: 16px;
     font-weight: bold;
-    color: var(--color);
-    background-color: var(--background-color);
+    margin: 10px;
+    padding: 10px 20px;
     transition: background-color 400ms, color 400ms;
 
     &:hover {
