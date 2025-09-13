@@ -42,7 +42,7 @@ const SECRETS = {
     password: "INTERSTELLAR",
     title: "Mission 2",
     html: `<p>Find Liam.</p>
-<p style="display: none;">Go to mcif tojcfwhs gdch cb qoadig.</p>`
+<p style="display: none;">Secret location: airr zsjsz 13 ghowfg</p>`
   },
   puzzle2: {
     password: "6439",
